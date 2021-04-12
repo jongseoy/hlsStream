@@ -72,9 +72,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	}
 	processCommands = append(processCommands,
 		"-fflags",
-		"flush_packets",
-		"-vcodec",
-		"copy",
+		"discardcorrupt",
 		"-hls_time",
 		"6",
 		"-hls_list_size",
