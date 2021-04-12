@@ -75,8 +75,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"flush_packets",
 		"-vcodec",
 		"copy",
-		"-segment_list_flags",
-		"live",
 		"-hls_time",
 		"6",
 		"-hls_list_size",
