@@ -71,6 +71,10 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		processCommands = append(processCommands, "-an")
 	}
 	processCommands = append(processCommands,
+		"-fflags",
+		"nobuffer",
+		"-vcodec",
+		"copy",
 		"-hls_flags",
 		"hls",
 		"-segment_list_flags",
