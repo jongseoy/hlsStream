@@ -70,7 +70,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	}
 	processCommands = append(processCommands,
 		"-hls_flags",
-		p.getHLSFlags(),
+		"flush_packets",
 		"-f",
 		"hls",
 		"-segment_list_flags",
