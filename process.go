@@ -52,6 +52,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	processCommands := []string{
 		"-y",
 		"-fflags",
+		"flush_packets",
 		"-rtsp_transport",
 		"tcp",
 		"-i",
