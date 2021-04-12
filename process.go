@@ -78,7 +78,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-segment_list_flags",
 		"live",
 		"-hls_time",
-		"30",
+		"1",
 		"-hls_list_size",
 		"10",
         "-hls_flags",
