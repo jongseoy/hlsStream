@@ -52,7 +52,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	processCommands := []string{
 		"-y",
 		"-fflags",
-		"-fflags flush_packets",
 		"-rtsp_transport",
 		"tcp",
 		"-i",
@@ -78,7 +77,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-segment_list_flags",
 		"live",
 		"-hls_time",
-		"1",
+		"20",
 		"-hls_list_size",
 		"10",
         "-hls_flags",
