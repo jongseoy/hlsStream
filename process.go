@@ -1,4 +1,4 @@
-package streamer
+package hlsStream
 
 import (
 	"fmt"
@@ -80,7 +80,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-hls_list_size",
 		"10",
         "-hls_flags",
-        "delete_segments",
 		"-hls_segment_filename",
 		fmt.Sprintf("%s/%%d.ts", path),
 		fmt.Sprintf("%s/index.m3u8", path),
