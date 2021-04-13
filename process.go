@@ -59,6 +59,8 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"10",
 		"-preset",
 		"veryfast",
+		"-vsync",
+		"vfr",
 		"-i",
 		URI,
 	}
