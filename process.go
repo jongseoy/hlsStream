@@ -54,6 +54,12 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"tcp",
 		"-i",
 		URI,
+
+	}
+	if p.audio {
+		processCommands = append(processCommands, "-an")
+	}
+	processCommands = append(processCommands,
 		"-vcodec",
 		"copy",
 		"-fflags",
@@ -63,11 +69,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-max_delay",
 		"10",
 		"-an",
-	}
-	if p.audio {
-		processCommands = append(processCommands, "-an")
-	}
-	processCommands = append(processCommands,
 		"-hls_time",
 		"6",
 		"-hls_list_size",
