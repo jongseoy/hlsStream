@@ -50,16 +50,13 @@ func (p Process) getHLSFlags() string {
 func (p Process) Spawn(path, URI string) *exec.Cmd {
 	os.MkdirAll(path, os.ModePerm)
 	processCommands := []string{
-		"-vcodec copy",
+		"-codec:v"
 		"-rtsp_transport",
 		"tcp",
-		"-vsync",
-		"2",
 		"-i",
 		URI,
 	}
 	processCommands = append(processCommands,
-
 		"-hls_time",
 		"6",
 		"-hls_list_size",
