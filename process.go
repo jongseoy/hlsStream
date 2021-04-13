@@ -62,6 +62,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"2",
 		"-max_delay",
 		"10",
+		"-an",
 	}
 	if p.audio {
 		processCommands = append(processCommands, "-an")
