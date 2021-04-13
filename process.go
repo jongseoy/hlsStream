@@ -55,7 +55,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-i",
 		URI,
 		"-vsync",
-		"2",
+		"-1",
 	}
 	if p.audio {
 		processCommands = append(processCommands, "-an")
