@@ -60,7 +60,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-preset",
 		"veryfast",
 		"-vsync",
-		"vfr",
+		"drop",
 		"-i",
 		URI,
 	}
