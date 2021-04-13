@@ -55,7 +55,9 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-i",
 		URI,
 		"-vcodec",
-		"libx264",
+		"copy",
+		"-fflags",
+		"+igndts",
 	}
 	if p.audio {
 		processCommands = append(processCommands, "-an")
