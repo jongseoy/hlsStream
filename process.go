@@ -53,6 +53,12 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-rtsp_transport",
 		"tcp",
 		"-an",
+		"-c:v",
+		"libx264",
+		"-crf",
+		"10",
+		"-preset",
+		"veryfast",
 		"-i",
 		URI,
 	}
