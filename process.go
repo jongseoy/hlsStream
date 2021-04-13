@@ -50,9 +50,11 @@ func (p Process) getHLSFlags() string {
 func (p Process) Spawn(path, URI string) *exec.Cmd {
 	os.MkdirAll(path, os.ModePerm)
 	processCommands := []string{
-		"-codec:v"
 		"-rtsp_transport",
 		"tcp",
+		"-r",
+		"60",
+		"-an",
 		"-i",
 		URI,
 	}
