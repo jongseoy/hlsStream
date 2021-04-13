@@ -52,12 +52,13 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	processCommands := []string{
 		"-rtsp_transport",
 		"tcp",
-		"-vcodec",
-		"copy"
+
 		"-i",
 		URI,
 	}
 	processCommands = append(processCommands,
+		"-vcodec",
+		"copy",
 		"-hls_time",
 		"6",
 		"-hls_list_size",
