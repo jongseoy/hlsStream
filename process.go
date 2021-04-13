@@ -54,19 +54,13 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"tcp",
 		"-i",
 		URI,
-		"-vsync",
-		"-1",
+		"fflags",
+		"flush_packets",
 	}
 	if p.audio {
 		processCommands = append(processCommands, "-an")
 	}
 	processCommands = append(processCommands,
-		"-vcodec",
-		"copy",
-		"-fflags",
-		"+igndts",
-		"-max_delay",
-		"10",
 		"-an",
 		"-hls_time",
 		"6",
