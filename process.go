@@ -50,22 +50,12 @@ func (p Process) getHLSFlags() string {
 func (p Process) Spawn(path, URI string) *exec.Cmd {
 	os.MkdirAll(path, os.ModePerm)
 	processCommands := []string{
-		"-y",
-		"-fflags",
-		"nobuffer",
 		"-rtsp_transport",
 		"tcp",
 		"-i",
 		URI,
-		"-vsync",
-		"1",
-		"-async",
-		"-1",
-		"-copyts",
 		"-vcodec",
 		"copy",
-		"-movflags",
-		"frag_keyframe+empty_moov",
 	}
 	if p.audio {
 		processCommands = append(processCommands, "-an")
