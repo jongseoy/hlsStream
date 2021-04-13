@@ -59,7 +59,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-fflags",
 		"+igndts",
 		"-vsync",
-		"0",
+		"2",
 		"-max_delay",
 		"10",
 	}
