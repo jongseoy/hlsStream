@@ -58,6 +58,8 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"copy",
 		"-fflags",
 		"+igndts",
+		"-vsync",
+		"0",
 		"-max_delay",
 		"10",
 	}
