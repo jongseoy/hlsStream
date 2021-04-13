@@ -71,10 +71,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		processCommands = append(processCommands, "-an")
 	}
 	processCommands = append(processCommands,
-		"-fflags",
-		"discardcorrupt",
-		"-vframes",
-		"90",
 		"-hls_time",
 		"6",
 		"-hls_list_size",
