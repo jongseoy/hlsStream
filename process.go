@@ -53,8 +53,9 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-rtsp_transport",
 		"tcp",
 		"-re",
-		"-movflags",
-		"use_metadata_flag",
+		"-c:v",
+		"copy",
+		"-an",
 		"-i",
 		URI,
 		"fflags",
@@ -64,7 +65,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		processCommands = append(processCommands, "-an")
 	}
 	processCommands = append(processCommands,
-		"-an",
 		"-hls_time",
 		"6",
 		"-hls_list_size",
