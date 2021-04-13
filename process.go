@@ -52,17 +52,10 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	processCommands := []string{
 		"-rtsp_transport",
 		"tcp",
-		"-re",
-		"-c:v",
-		"copy",
-		"-an",
+		"-vcodec",
+		"copy"
 		"-i",
 		URI,
-		"fflags",
-		"flush_packets",
-	}
-	if p.audio {
-		processCommands = append(processCommands, "-an")
 	}
 	processCommands = append(processCommands,
 		"-hls_time",
