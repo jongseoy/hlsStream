@@ -52,8 +52,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	processCommands := []string{
 		"-rtsp_transport",
 		"tcp",
-		"-r",
-		"60",
 		"-an",
 		"-i",
 		URI,
