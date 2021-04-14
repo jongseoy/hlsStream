@@ -62,7 +62,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 	}
 	processCommands = append(processCommands,
 		"-hls_time",
-		"6",
+		"3",
 		"-hls_list_size",
 		"100",
         "-hls_flags",
