@@ -54,8 +54,6 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"tcp",
 		"-vf",
 		"mpdecimate",
-		"-vsync",
-		"2",
 		"-vcodec",
 		"copy",
 		"-an",
@@ -63,6 +61,8 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		URI,
 	}
 	processCommands = append(processCommands,
+		"-vsync",
+		"2",
 		"-hls_time",
 		"3",
 		"-hls_list_size",
