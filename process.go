@@ -55,7 +55,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-vf",
 		"mpdecimate",
 		"-vsync",
-		"vfr",
+		"2",
 		"-vcodec",
 		"copy",
 		"-an",
