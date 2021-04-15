@@ -55,6 +55,7 @@ func (p Process) Spawn(path, URI string) *exec.Cmd {
 		"-fflags",
 		"+genpts",
 		"-an",
+		"-vn",
 		"-vcodec",
 		"copy",
 		"-i",
